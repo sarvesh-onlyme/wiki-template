@@ -1,0 +1,34 @@
+body {
+	background-color: #EFEFEF;
+}
+
+.head {
+	background-color: #FFFFFF;
+}
+
+.views {
+	margin-left: auto;
+	margin-right: auto;
+	height: 80%;
+}
+
+.search-input {
+	width: 40%;
+	margin-top: 1%;
+}
+
+.contributors-list {
+	margin-left: 5%;
+	margin-right: auto;
+	width: 70%;
+	margin-top: 2%;
+}
+
+/* Signin*/
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-left: auto;
+}

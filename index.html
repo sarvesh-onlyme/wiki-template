@@ -1,0 +1,42 @@
+<html>
+<script type="text/javascript" src="./js/jQuery-1.11.2.js"></script>
+<script type="text/javascript" src="./js/angular/angular.min.js"></script>
+<script type="text/javascript" src="./js/angular/angular-route.js"></script>
+<script type="text/javascript" src="./js/wikiApp.js"></script>
+<script type="text/javascript" src="./js/route.js"></script>
+<script type="text/javascript" src="./js/Crtl.js"></script>
+<link rel="stylesheet" type="text/css" href="./bootstrap-3.3.4-dist/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="./css/main.css" />
+
+<body>
+<header class="nav nav-pills navbar-static-top head">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="./" class="navbar-brand">WIKIMEDIA-TECH-MATRICS</a>
+		</div>
+		<nav class="collapse navbar-collapse bs-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li role="presentation" class="active"><a href="#/home">Home</a></li>
+				<li role="presentation"><a href="#/contributor">Contributor</a></li>
+			</ul>
+			<ul class="nav navbar-nav search-input">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search for...">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">Go!</button>
+					</span>
+				</div><!-- /input-group -->
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#/account">Account</a></li>
+				<li><a href="#/signin">Sign-in</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div ng-app = "wikiApp" ng-controller="wikiCtrl" class="views">
+	<div ng-view></div>
+</div>
+
+</body>
+</html>
