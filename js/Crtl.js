@@ -1,5 +1,5 @@
 app.controller("wikiCtrl", function($scope, $http){
-	$http.get("http://localhost/wiki-template/data/contributors.json").success(function (response) {
+	$http.get("./data/contributors.json").success(function (response) {
 		$scope.data = response;
 	});
 });
