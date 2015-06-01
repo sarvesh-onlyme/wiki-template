@@ -5,8 +5,8 @@
 <script type="text/javascript" src="./js/wikiApp.js"></script>
 <script type="text/javascript" src="./js/route.js"></script>
 <script type="text/javascript" src="./js/Crtl.js"></script>
-<link rel="stylesheet" type="text/css" href="./bootstrap-3.3.4-dist/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="./css/main.css" />
+<link rel="stylesheet" type="text/css" href="./bootstrap-3.3.4-dist/css/bootstrap.min.css" />
 
 <body>
 <header class="nav nav-pills navbar-static-top head">
@@ -15,11 +15,7 @@
 			<a href="./" class="navbar-brand">WIKIMEDIA-TECH-MATRICS</a>
 		</div>
 		<nav class="collapse navbar-collapse bs-navbar-collapse">
-			<ul class="nav navbar-nav">
-				<li role="presentation" class="active"><a href="#/home">Home</a></li>
-				<li role="presentation"><a href="#/contributor">Contributor</a></li>
-			</ul>
-			<ul class="nav navbar-nav search-input">
+			<ul class="search-input nav navbar-nav">
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Search for...">
 					<span class="input-group-btn">
@@ -34,8 +30,19 @@
 		</nav>
 	</div>
 </header>
-<div ng-app = "wikiApp" ng-controller="wikiCtrl" class="views">
-	<div ng-view></div>
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+	<ul class="nav nav-sidebar">
+		<li class="active-sidebar"><a href="./">Home<span class="sr-only">(current)</span></a></li>
+		<li><a href="#/contributor">Contributor</a></li>
+		<li><a href="#">Reports</a></li>
+		<li><a href="#">Analytics</a></li>
+	</ul>
+</div>
+<div class="col-sm-9">
+	<div ng-app = "wikiApp" ng-controller="wikiCtrl" class="views">
+		<div ng-view></div>
+	</div>
 </div>
 
 </body>

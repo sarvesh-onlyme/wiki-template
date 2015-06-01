@@ -4,7 +4,7 @@ app.config(function($routeProvider){
 			controller: 'contributorCtrl',
 			templateUrl: 'views/contributors.html',
 		})
-		.when( '/home', {
+		.when( '/', {
 			controller: 'homeCtrl',
 			templateUrl: 'views/home.html',
 		})

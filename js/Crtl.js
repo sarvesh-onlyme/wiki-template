@@ -1,16 +1,16 @@
 app.controller("wikiCtrl", function($scope, $http){
-	$http.get("http://localhost/templates/data/contributors.json").success(function (response) {
+	$http.get("http://localhost/wiki-template/data/contributors.json").success(function (response) {
 		$scope.data = response;
 	});
 });
 
 app.controller("contributorCtrl", function($scope, $routeParams){
 	$scope.param = $routeParams.param;
-	var attr = $('[role="presentation"]');
+	var attr = $('.nav-sidebar li');
 	for (var i = 0; i < attr.length; i++) {
 		attr[i].className = "";
 	};
-	$('a[href="#/contributor"]')[0].parentElement.className = "active";
+	$('.nav-sidebar a[href="#/contributor"]')[0].parentElement.className = "active-sidebar";
 });
 
 app.controller("homeCtrl", function($scope, $routeParams){
@@ -19,7 +19,7 @@ app.controller("homeCtrl", function($scope, $routeParams){
 	for (var i = 0; i < attr.length; i++) {
 		attr[i].className = "";
 	};
-	$('a[href="#/home"]')[0].parentElement.className = "active";
+	$('.nav-sidebar a[href="./"]')[0].parentElement.className = "active-sidebar";
 });
 
 app.controller("accountCtrl", function($scope, $routeParams, $http){

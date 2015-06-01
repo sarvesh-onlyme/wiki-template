@@ -1,9 +1,16 @@
+/* index.html */
+
 body {
 	background-color: #EFEFEF;
 }
 
 .head {
 	background-color: #FFFFFF;
+}
+
+.active-sidebar > a {
+	color: #FFFFFF;
+	background-color: #428bca;
 }
 
 .views {
