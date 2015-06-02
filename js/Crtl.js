@@ -32,7 +32,10 @@ app.controller("accountCtrl", function($scope, $routeParams, $http){
 		"id": 1,
 		"name": "john",
 		"username": "john",
-		"email": "john@mediawiki.org"
+		"email": "john@mediawiki.org",
+		"organization": "wikimedia",
+		"start_date": "2014-1-1",
+		"end_date": "currently"
 	};
 	$scope.user = user;
 });

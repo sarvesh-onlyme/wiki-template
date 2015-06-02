@@ -5,12 +5,18 @@
 			<th>Name</th>
 			<th>UserName</th>
 			<th>Email</th>
+			<th>Organization</th>
+			<th>Start Date</th>
+			<th>End Date</th>
 		</tr>
 		<tr ng-repeat="x in data">
 			<td>{{ x.id }}</td>
 			<td>{{ x.name }}</td>
 			<td>{{ x.username }}</td>
 			<td>{{ x.email }}</td>
+			<td>{{ x.organization }}</td>
+			<td>{{ x.start_date }}</td>
+			<td>{{ x.end_date }}</td>
 		</tr>
 	</table>
 </div>
