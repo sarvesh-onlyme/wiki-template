@@ -18,8 +18,16 @@ app.controller("homeCtrl", function($scope, $routeParams){
 	var attr = $('[role="presentation"]');
 	for (var i = 0; i < attr.length; i++) {
 		attr[i].className = "";
-	};
+	}
 	$('.nav-sidebar a[href="./"]')[0].parentElement.className = "active-sidebar";
+
+	$scope.showEditRow = function(x) {
+		var id = this.x.id;
+		console.log(id);
+		$("[name="+id+"]").$scope.active = 1;
+//		$scope.active = 1;
+//		$scope.active = !$scope.active;
+	};
 });
 
 app.controller("accountCtrl", function($scope, $routeParams, $http){
@@ -34,6 +42,7 @@ app.controller("accountCtrl", function($scope, $routeParams, $http){
 		"username": "john",
 		"email": "john@mediawiki.org",
 		"organization": "wikimedia",
+		"country": "Spain",
 		"start_date": "2014-1-1",
 		"end_date": "currently"
 	};

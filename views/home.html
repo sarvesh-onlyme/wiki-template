@@ -6,17 +6,49 @@
 			<th>UserName</th>
 			<th>Email</th>
 			<th>Organization</th>
+			<th>Country</th>
 			<th>Start Date</th>
 			<th>End Date</th>
+			<th>Edit</th>
 		</tr>
-		<tr ng-repeat="x in data">
-			<td>{{ x.id }}</td>
-			<td>{{ x.name }}</td>
-			<td>{{ x.username }}</td>
-			<td>{{ x.email }}</td>
-			<td>{{ x.organization }}</td>
-			<td>{{ x.start_date }}</td>
-			<td>{{ x.end_date }}</td>
+		<tr ng-repeat="x in data" name="{{x.id}}">
+			<td name="id">
+				<input class="form-control input-sm" value="{{x.id}}" ng-show="active" />
+				<span ng-show="!active">{{ x.id }}</span>
+			</td>
+			<td name="name">
+				<input class="form-control input-sm" value="{{x.name}}" ng-show="active" />
+				<span ng-show="!active">{{ x.name }}</span>
+			</td>
+			<td name="username">
+				<input class="form-control input-sm" value="{{x.username}}" ng-show="active" />
+				<span ng-show="!active">{{ x.username }}</span>
+			</td>
+			<td name="email">
+				<input class="form-control input-sm" value="{{x.email}}" ng-show="active" />
+				<span ng-show="!active">{{ x.email }}</span>
+			</td>
+			<td name="organization">
+				<input class="form-control input-sm" value="{{x.organization}}" ng-show="active" />
+				<span ng-show="!active">{{ x.organization }}</span>
+			</td>
+			<td name="country">
+				<input class="form-control input-sm" value="{{x.country}}" ng-show="active" />
+				<span ng-show="!active">{{ x.country }}</span>
+			</td>
+			<td name="start_date">
+				<input class="form-control input-sm" value="{{x.start_date}}" ng-show="active" />
+				<span ng-show="!active">{{ x.start_date }}</span>
+			</td>
+			<td name="end_date">
+				<input class="form-control input-sm" value="{{x.end_date}}" ng-show="active" />
+				<span ng-show="!active">{{ x.end_date }}</span>
+			</td>
+			<td>
+				<a href="" class="btn btn-primary btn-sm" ng-click="showEditRow(x)">
+					<span>Edit</span>
+				</a>
+			</td>
 		</tr>
 	</table>
 </div>
