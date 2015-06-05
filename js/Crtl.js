@@ -104,3 +104,7 @@ app.controller("accountCtrl", function($scope, $routeParams, $http){
 app.controller("signinCtrl", function($scope, $routeParams){
 	$scope.param = $routeParams.param;
 });
+
+app.controller("seachCtrl", function($scope, $routeParams){
+	$scope.param = $routeParams.param;
+});

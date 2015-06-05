@@ -19,17 +19,7 @@ body {
 	height: 80%;
 }
 
-.search-input {
-	width: 40%;
-	margin-top: 1%;
-}
 
-.contributors-list {
-	margin-left: 5%;
-	margin-right: auto;
-	width: 70%;
-	margin-top: 2%;
-}
 
 /* Signin*/
 .form-signin {
@@ -41,6 +31,20 @@ body {
 }
 
 /* Home.html */
+
+.contributors-list {
+	margin-left: 0%;
+	margin-right: auto;
+	width: 70%;
+	margin-top: 2%;
+}
+
+.search-input {
+	width: 40%;
+	margin-top: 0%;
+	margin-left: 1%;
+}
+
 .col-id {
 
 }

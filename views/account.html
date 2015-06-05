@@ -6,6 +6,7 @@
 			<tr name="id">
 				<th>id</th>
 				<td>
+					<input class="form-control input-sm" value="{{user.id}}" ng-show="active" readonly/>
 					<span ng-show="!active">{{ user.id }}</span>
 				</td>	
 			</tr>
@@ -13,7 +14,7 @@
 				<th>Name</th>
 				<td>
 					<span ng-show="!active">{{ user.name }}</span>
-					<input class="form-control input-sm" value="{{user.id}}" ng-show="active" readonly/>
+					<input class="form-control input-sm" value="{{user.name}}" ng-show="active"/>
 				</td>
 			</tr>
 			<tr name="username">
