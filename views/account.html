@@ -1,40 +1,68 @@
 <div class="container">
 	<div class="col-md-1"></div>
 	<div class="col-md-6">
-		<table class="table table-hover account-info">
+		<table class="table table-hover account-info" ng-init="active=0">
 			<caption>Account Information</caption>
-			<tr>
-				<th>#</th>
-				<td>{{ user.id }}</td>	
+			<tr name="id">
+				<th>id</th>
+				<td>
+					<span ng-show="!active">{{ user.id }}</span>
+				</td>	
 			</tr>
-			<tr>
+			<tr name="name">
 				<th>Name</th>
-				<td>{{ user.name }}</td>
+				<td>
+					<span ng-show="!active">{{ user.name }}</span>
+					<input class="form-control input-sm" value="{{user.id}}" ng-show="active" readonly/>
+				</td>
 			</tr>
-			<tr>
+			<tr name="username">
 				<th>UserName</th>
-				<td>{{ user.username }}</td>
+				<td>
+					<span ng-show="!active">{{ user.username }}</span>
+					<input class="form-control input-sm" value="{{user.username}}" ng-show="active" />
+				</td>
 			</tr>
-			<tr>
+			<tr name="email">
 				<th>Email</th>
-				<td>{{ user.email }}</td>
+				<td>
+					<span ng-show="!active">{{ user.email }}</span>
+					<input class="form-control input-sm" value="{{user.email}}" ng-show="active" />
+				</td>
 			</tr>
-			<tr>
+			<tr name="organization">
 				<th>Organizarion</th>
-				<td>{{ user.organization }}</td>
+				<td>
+					<span ng-show="!active">{{ user.organization }}</span>
+					<input class="form-control input-sm" value="{{user.organization}}" ng-show="active" />
+				</td>
 			</tr>
-			<tr>
+			<tr name="country">
 				<th>Country</th>
-				<td>{{ user.country }}</td>
+				<td>
+					<span ng-show="!active">{{ user.country }}</span>
+					<input class="form-control input-sm" value="{{user.country}}" ng-show="active" />
+				</td>
 			</tr>
-			<tr>
+			<tr name="start_date">
 				<th>Start Date</th>
-				<td>{{ user.start_date }}</td>
+				<td>
+					<span ng-show="!active">{{ user.start_date }}</span>
+					<input class="form-control input-sm" value="{{user.start_date}}" ng-show="active" />
+				</td>
 			</tr>
-			<tr>
+			<tr name="end_date">
 				<th>End Date</th>
-				<td>{{ user.end_date }}</td>
+				<td>
+					<span ng-show="!active">{{ user.end_date }}</span>
+					<input class="form-control input-sm" value="{{user.end_date}}" ng-show="active" />
+				</td>
 			</tr>
 		</table>
+		<div class="edit">
+			<a href="" class="btn btn-primary btn-sm" ng-click="showEditRow(x)">
+				<span>Edit</span>
+			</a>
+		</div>
 	</div>
 </div>

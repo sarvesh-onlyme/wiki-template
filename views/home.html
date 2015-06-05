@@ -1,19 +1,19 @@
 <div>
 	<table class="table table-bordered table-hover contributors-list">
 		<tr>
-			<th>#</th>
-			<th>Name</th>
-			<th>UserName</th>
-			<th>Email</th>
-			<th>Organization</th>
-			<th>Country</th>
-			<th>Start Date</th>
-			<th>End Date</th>
-			<th>Edit</th>
+			<th class="col-id">#</th>
+			<th class="col-name">Name</th>
+			<th class="col-username">UserName</th>
+			<th class="col-email">Email</th>
+			<th class="col-organization">Organization</th>
+			<th class="col-country">Country</th>
+			<th class="col-start_date">Start Date</th>
+			<th class="col-end_date">End Date</th>
+			<th class="col-edit">Edit</th>
 		</tr>
-		<tr ng-repeat="x in data" name="{{x.id}}">
+		<tr ng-repeat="x in data" name="{{x.id}}" ng-init="active=0">
 			<td name="id">
-				<input class="form-control input-sm" value="{{x.id}}" ng-show="active" />
+				<input class="form-control input-sm" value="{{x.id}}" ng-show="active" readonly/>
 				<span ng-show="!active">{{ x.id }}</span>
 			</td>
 			<td name="name">
@@ -47,6 +47,9 @@
 			<td>
 				<a href="" class="btn btn-primary btn-sm" ng-click="showEditRow(x)">
 					<span>Edit</span>
+				</a>
+				<a href="" class="btn btn-primary btn-danger btn-sm" ng-click="deleteRow(x)">
+					<span>Del</span>
 				</a>
 			</td>
 		</tr>
