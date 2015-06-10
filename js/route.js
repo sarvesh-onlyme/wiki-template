@@ -1,9 +1,5 @@
 app.config(function($routeProvider){
 	$routeProvider
-		.when( '/contributor', {
-			controller: 'contributorCtrl',
-			templateUrl: 'views/contributors.html',
-		})
 		.when( '/', {
 			controller: 'homeCtrl',
 			templateUrl: 'views/home.html',
@@ -15,5 +11,13 @@ app.config(function($routeProvider){
 		.when( '/signin', {
 			controller: 'signinCtrl',
 			templateUrl: 'views/signin.html',
+		})
+		.when( '/country', {
+			controller: 'countryCtrl',
+			templateUrl: 'views/country.html',
+		})
+		.when( '/company', {
+			controller: 'companyCtrl',
+			templateUrl: 'views/company.html',
 		});
 });

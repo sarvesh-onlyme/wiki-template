@@ -45,38 +45,18 @@ body {
 	margin-left: 1%;
 }
 
-.col-id {
-
+/* Country.html */
+.countries-list {
+	margin-left: 0%;
+	margin-right: auto;
+	width: 70%;
+	margin-top: 2%;
 }
 
-.col-name {
-
-}
-
-.col-username {
-
-}
-
-.col-email {
-
-}
-
-.col-organization {
-
-}
-
-.col-country {
-
-}
-
-.col-start_date {
-
-}
-
-.col-end_date {
-
-}
-
-.col-edit {
-	
+/* Company.html */
+.companies-list {
+	margin-left: 0%;
+	margin-right: auto;
+	width: 70%;
+	margin-top: 2%;
 }
